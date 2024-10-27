@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1, "nome": "Trabalho 1", 
+    "matéria": "Front-End", 
+    "nota": 7.00, 
+    "tipodotrabalho": "Checkpoint", 
+    "autor": "Gabriel Teodoro"
+    },
+    {
+        "id": 2,
+        "nome": "Trabalho 2",
+        "matéria": "Java",
+        "nota": 8.50,
+        "tipodotrabalho": "GlobalSolutions",
+        "autor": "Lura Ura"
+      },
+      {
+        "id": 3,
+        "nome": "Trabalho 3",
+        "matéria": "DataBase",
+        "nota": 6.75,
+        "tipodotrabalho": "Challenge Sprints",
+        "autor": "Eduardo Ribeiro"
+      },
+      {
+        "id": 4,
+        "nome": "Trabalho 4",
+        "matéria": "Front-End",
+        "nota": 9.20,
+        "tipodotrabalho": "Checkpoint",
+        "autor": "Gabriel Teodoro"
+      },
+      {
+        "id": 5,
+        "nome": "Trabalho 5",
+        "matéria": "Python",
+        "nota": 8.00,
+        "tipodotrabalho": "GlobalSolutions",
+        "autor": "Gabriel Teodoro"
+      }
+      
+]
