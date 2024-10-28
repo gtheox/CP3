@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pagina Inicial */
+.container {
+  @apply p-8;
+}
+
+.header-title {
+  @apply text-4xl font-bold mb-6;
+}
+
+.description {
+  @apply mb-10 text-base leading-relaxed text-gray-800;
+}
+
+.authors-grid {
+  @apply grid gap-8 grid-cols-1 md:grid-cols-3;
+}
+
+.author-card {
+  @apply text-center;
+}
+
+.author-image {
+  @apply rounded-full mx-auto;
+}
+
+.author-name {
+  @apply text-xl font-semibold mt-4;
+}
+
+.author-rm {
+  @apply text-base text-gray-600;
+}
+/* Cadastro */
+
+.cadastro-container {
+    @apply flex flex-col items-center justify-center min-h-screen bg-gray-100;
+  }
+  
+  .cadastro-form {
+    @apply bg-white shadow-md rounded-lg p-8 w-96;
+  }
+  
+  .cadastro-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .cadastro-input {
+    @apply mt-1 p-2 border border-gray-300 rounded-md w-full;
+  }
+  
+  .cadastro-button {
+    @apply mt-4 p-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700;
+  }
+  
+  .cadastro-title {
+    @apply text-3xl font-bold mb-6;
+  }
+
+/* Cabeçalho e Menu */
+.big-header {
+    @apply bg-blue-600 text-white p-4 flex flex-col items-center;
+  }
+  
+  .big-header h1 {
+    @apply text-2xl font-bold;
+  }
+  
+  .menu {
+    @apply mt-2;
+  }
+  
+  .menu ul {
+    @apply flex space-x-4;
+  }
+  
+  .menu li {
+    @apply text-lg;
+  }
+  
+  .menu a {
+    @apply text-white hover:text-gray-200 transition-colors duration-300;
+  }
+  
+  /* Rodapé */
+  footer {
+    @apply bg-gray-800 text-white p-4 text-center;
+  }
+  
+  footer p {
+    @apply text-sm;
+  }
+  
+  footer span {
+    @apply font-semibold;
+  }
+  
+  /* =================== */
+/* Estilos para a página Checkpoint */
+/* =================== */
+
+.container {
+    @apply max-w-7xl mx-auto px-4;
+}
+
+h2 {
+    @apply text-2xl font-bold mb-4;
+}
+
+table {
+    @apply min-w-full bg-white border border-gray-200;
+}
+
+th {
+    @apply py-2 px-4 border-b border-gray-200 text-left bg-gray-200;
+}
+
+td {
+    @apply py-2 px-4 border-b border-gray-200;
+}
+
+.hover\:bg-gray-100:hover {
+    @apply bg-gray-100;
+}
+
+/* =================== */
+/* Estilos Gerais */
+/* =================== */
+
+body {
+    @apply bg-gray-50;
+}
+
+/* Estilo para botões */
+button {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600;
+}
+
+/* Estilo para alertas */
+.alert {
+    @apply bg-green-200 text-green-800 border border-green-300 rounded p-4 mb-4;
+}
