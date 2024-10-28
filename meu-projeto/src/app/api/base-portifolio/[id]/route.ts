@@ -9,24 +9,15 @@ const database = new Databases(client);
 type Params = { params: { id: string } };
 
 // GET para recuperar um trabalho pelo ID
-export async function GET(
-  request: Request,
-  { params }: Params
-) {
-  const { id } = params;
-
+export async function GET(request:Request,{params}:{params:{id:string}}) {
   try {
-    const response = await database.getDocument(
-      process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID as string,
-      process.env.NEXT_PUBLIC_APPWRITE_COLLECTIONS_ID as string,
-      id
-    );
-    return NextResponse.json(response);
+
+          const response = await database.getDocument(process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID as string, process.env.NEXT_PUBLIC_APPWRITE_COLLECTIONS_ID as string, params.id);
+      
+      return NextResponse.json(response);
+
   } catch (error) {
-    return NextResponse.json(
-      { error: "Falha na obtenção da informação: " + (error as Error).message },
-      { status: 500 }
-    );
+      return NextResponse.json({error: "Falha na obtenção da informação."+ error}, {status:500})
   }
 }
 
