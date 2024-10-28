@@ -5,13 +5,16 @@ import client from "../../../../../lib/appwrite_client";
 // Criar um objeto DATABASE passando o arquivo de configuração da plataforma.
 const database = new Databases(client);
 
+// Definição de tipo para os parâmetros da rota
+type Params = { params: { id: string } };
+
 // GET para recuperar um trabalho pelo ID
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: Params
 ) {
   const { id } = params;
-  
+
   try {
     const response = await database.getDocument(
       process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID as string,
@@ -30,10 +33,10 @@ export async function GET(
 // PUT para atualizar um trabalho pelo ID
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: Params
 ) {
   const { id } = params;
-  
+
   try {
     const trabalho = await request.json();
     await database.updateDocument(
@@ -56,10 +59,10 @@ export async function PUT(
 // DELETE para excluir um trabalho pelo ID
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: Params
 ) {
   const { id } = params;
-  
+
   try {
     await database.deleteDocument(
       process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID as string,
