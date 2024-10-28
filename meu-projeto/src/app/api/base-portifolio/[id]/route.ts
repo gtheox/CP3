@@ -8,9 +8,9 @@ const database = new Databases(client);
 // GET para recuperar um trabalho pelo ID
 export async function GET(
   request: Request,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
   
   try {
     const response = await database.getDocument(
@@ -30,9 +30,9 @@ export async function GET(
 // PUT para atualizar um trabalho pelo ID
 export async function PUT(
   request: Request,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
   
   try {
     const trabalho = await request.json();
@@ -56,9 +56,9 @@ export async function PUT(
 // DELETE para excluir um trabalho pelo ID
 export async function DELETE(
   request: Request,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
   
   try {
     await database.deleteDocument(
